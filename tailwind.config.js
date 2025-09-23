@@ -19,7 +19,8 @@ export default {
         inter: ["Inter", "sans-serif"], // keep Inter also
       },
       boxShadow: {
-        shadowOne: "0 4px 15px rgba(0,0,0,0.5)", // fixes shadow-shadowOne
+        shadowOne: "0 4px 15px rgba(1,1,0,10.9)",
+        shadowTwo: "0 4px 15px rgb(255,255,255,0.1)",
       },
     screens: {
         xs: "320px",

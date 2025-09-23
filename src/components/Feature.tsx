@@ -9,7 +9,7 @@ const Feature = () => {
   return (
     <section
       id="features"
-      className="w-full py-20 border-b-[1px] border-b-gray-700"
+      className="w-full py-20 px-20 px border-b-[1px] border-b-gray-700"
     >
       <FadeIn>
         <Title title="Features" des="What I Do" />
