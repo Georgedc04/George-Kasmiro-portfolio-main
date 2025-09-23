@@ -132,7 +132,7 @@ const ServicesAndTestimonials = () => {
             <Slider 
             {...settings}>
               {testimonials.map((t, i) => (
-                <div key={i} className="pl-20 flex justify-center px-2">
+                <div key={i} className=" flex justify-center px-2">
                   <div className="w-full lg:w-4/5 flex flex-col lg:flex-row items-center gap-8 animate-slideIn">
                     {/* Image */}
                     <div className="w-full lg:w-1/3 flex flex-col items-center bg-gradient-to-tr from-gray-800 to-gray-700 dark:from-gray-900 dark:to-gray-800 p-6 rounded-xl shadow-lg">
