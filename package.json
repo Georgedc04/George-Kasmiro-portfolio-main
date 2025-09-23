@@ -10,11 +10,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "framer-motion": "^11.2.10",
+    "@emailjs/browser": "^4.4.1",
+    "framer-motion": "^11.18.2",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.3",
+    "lucide-react": "^0.544.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.2.1",
-    "react-router-dom": "^6.23.1"
+    "react-router-dom": "^6.23.1",
+    "react-simple-typewriter": "^5.0.1",
+    "react-slick": "^0.31.0",
+    "react-to-print": "^3.1.1",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

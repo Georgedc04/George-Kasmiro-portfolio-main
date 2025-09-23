@@ -1,82 +1,127 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-
-import Logo from "../../assets/logo.png"
-import { LiaTimesSolid } from 'react-icons/lia';
-import { FaBars, FaPhone } from 'react-icons/fa6';
-import Theme from '../theme/Theme';
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import { LiaTimesSolid } from "react-icons/lia";
+import { FaBars, FaPhone } from "react-icons/fa6";
+import Theme from "../theme/Theme";
 
 const Navbar = () => {
+  const [open, setOpen] = React.useState(false);
+  const location = useLocation(); // To get current path
 
-    const [open, setOpen] = React.useState(false);
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/blog", label: "Blog" },
+    { href: "/services", label: "Services" },
+    { href: "/about", label: "About" },
+    { href: "/projects", label: "Projects" },
+  ];
 
-    const navLinks = [
-        { href: "/", label: "Home" },
-        { href: "/about", label: "About" },
-        { href: "/bus", label: "Bus" },
-        { href: "/services", label: "Services" },
-    ]
+  const handleClick = () => setOpen(!open);
+  const handleClose = () => setOpen(false);
 
-    const handleClick = () => {
-        setOpen(!open);
-    }
+  // ✅ Removed TypeScript type annotation
+const getLinkClasses = (path) => {
+  const isActive = location.pathname === path;
+  return `relative transition-colors duration-200 ${
+    isActive
+      ? "text-designColor/90 after:w-full/50" // Active link underline
+      : "text-gray-600 dark:text-neutral-400 hover:text-designColor dark:hover:text-designColor/70"
+  } after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:bg-designColor after:w-0 hover:after:w-full after:transition-all after:duration-300`;
+};
 
-    const handleClose = () => {
-        setOpen(false);
-    }
 
-    return (
-        <div className='w-full h-[8ch] bg-neutral-100 dark:bg-neutral-900 flex items-center md:flex-row lg:px-28 md:px-16 sm:px-7 px-4 fixed top-0 z-50'>
-            {/* Logo section */}
-            <Link to={"/"} className='mr-16'>
-                <img src={Logo} alt="logo" className="w-28 h-auto object-contain" />
-            </Link>
+  return (
+    <div className="w-full h-[8ch] bg-neutral-100/70 dark:bg-neutral-900/70 backdrop-blur-md border-b border-neutral-200/50 dark:border-neutral-700/30 flex items-center md:flex-row lg:px-28 md:px-16 sm:px-7 px-4 fixed top-0 z-50">
+      
+      {/* Logo */}
+      <Link to="/" className="mr-16 ">
+        <img
+          src="/logo.png"
+          alt="logo"
+          className="w-12 h-auto object-contain rounded-full border-2 border-designColor hover:scale-105 transition-transform duration-300"
+        />
+      </Link>
 
-            {/* Toggle button */}
-            <button onClick={handleClick} className="flex-1 lg:hidden text-neutral-600 dark:text-neutral-300 ease-in-out duration-300 flex items-center justify-end">
-                {
-                    open ?
-                        <LiaTimesSolid className='text-xl' />
-                        :
-                        <FaBars className='text-xl' />
-                }
-            </button>
+      {/* Hamburger for mobile */}
+      <button
+        onClick={handleClick}
+        className="flex-1 lg:hidden text-neutral-950 dark:text-neutral-300 flex items-center justify-end"
+      >
+        {open ? <LiaTimesSolid className="text-xl" /> : <FaBars className="text-xl" />}
+      </button>
 
-            {/* Navigation links */}
-            <div className={`${open ? 'flex absolute top-14 left-0 w-full h-auto md:h-auto md:relative' : 'hidden'} flex-1 md:flex flex-col md:flex-row gap-x-5 gap-y-2 md:items-center md:p-0 sm:p-4 p-4 justify-between md:bg-transparent bg-neutral-100 md:shadow-none shadow-md rounded-md`}>
-                <ul className="list-none flex md:items-center items-start gap-x-5 gap-y-1 flex-wrap md:flex-row flex-col text-base text-neutral-600 dark:text-neutral-500 font-medium">
-                    {navLinks.map((link, index) => (
-                        <li key={index}>
-                            <Link
-                                to={link.href}
-                                onClick={handleClose}
-                                className="hover:text-violet-600 ease-in-out duration-300"
-                            >
-                                {link.label}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
+      {/* Mobile Menu */}
+      <div
+        className={`fixed top-0 left-0 h-screen w-64 shadow-md transform ${
+          open ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 flex flex-col justify-between p-6 md:hidden z-50`}
+        style={{ backgroundColor: "rgba(15, 15, 15, 0.95)" }}
+      >
+        <ul className="flex flex-col gap-4">
+          {navLinks.map((link, i) => (
+            <li 
+            key={i}>
+              <Link to={link.href} onClick={handleClose} className={getLinkClasses(link.href) }>
+                {link.label}
+              </Link>
 
-                <div className="flex md:items-center items-start gap-x-5 gap-y-2 flex-wrap md:flex-row flex-col text-base font-medium text-neutral-800">
-                    <div className="relative bg-violet-600 rounded-md px-8 py-2 w-fit cursor-pointer">
-                        <div className="absolute top-[50%] -left-6 translate-y-[-50%] w-9 h-9 rounded-full bg-violet-600 border-4 border-neutral-100 dark:border-neutral-900 flex items-center justify-center">
-                            <FaPhone className='text-neutral-50 text-sm' />
-                        </div>
-                        <div className="space-y-0.5">
-                            <p className="text-xs text-neutral-200 font-light">
-                                Need Help?
-                            </p>
-                            <p className="text-xs font-normal text-neutral-50 tracking-wide">+91 1234567890</p>
-                        </div>
-                    </div>
-                    {/* Theme */}
-                    <Theme />
-                </div>
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-6 flex flex-col gap-4">
+          <Link
+            to="/contact"
+            onClick={handleClose}
+            className="relative bg-designColor/75 rounded-md px-6 py-2 w-fit cursor-pointer hover:bg-designColor/90 transition-colors"
+          >
+            <div className="absolute top-[50%] -left-6 translate-y-[-50%] w-9 h-9 rounded-full bg-designColor/75 border-4 border-neutral-100 dark:border-neutral-900 flex items-center justify-center">
+              <FaPhone className="text-neutral-50 text-sm" />
             </div>
-
+            <div className="space-y-0.5">
+              <p className="text-xs text-neutral-200 font-light">Lets Connnect</p>
+              <p className="text-xs font-normal text-neutral-50 tracking-wide">
+                +91 9258885837
+              </p>
+            </div>
+          </Link>
+          <Theme />
         </div>
-    )
-}
+      </div>
 
-export default Navbar
+      {/* Desktop Menu */}
+      <div className="hidden md:flex md:flex-row md:items-center md:gap-x-5 flex-1 justify-between">
+        <ul className="flex flex-row gap-x-5">
+          {navLinks.map((link, i) => (
+            <li key={i}>
+              <Link to={link.href} className={getLinkClasses(link.href)}>
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <div className="flex items-center gap-4">
+          <Link
+            to="/contact"
+            className="relative bg-designColor/75 rounded-md px-6 py-2 w-fit cursor-pointer hover:bg-designColor/90 transition-colors"
+          >
+            <div className="absolute top-[50%] -left-6 translate-y-[-50%] w-9 h-9 rounded-full bg-designColor/75 border-4 border-neutral-100 dark:border-neutral-900 flex items-center justify-center">
+              <FaPhone className="text-neutral-50 text-sm" />
+            </div>
+            <div className="space-y-0.5">
+              <p className="text-xs text-neutral-200 font-light">Lets Connnect</p>
+              <p className="text-xs font-normal text-neutral-50 tracking-wide">
+                +91 9258885837
+              </p>
+            </div>
+          </Link>
+
+          <Theme />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
