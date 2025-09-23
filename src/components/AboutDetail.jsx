@@ -1,4 +1,5 @@
 import { FaRegHandPaper } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 // src/pages/About.jsx
 export default function About() {
@@ -33,12 +34,12 @@ export default function About() {
 
         {/* Call to action */}
         <div className="mt-10">
-          <a
-            href="/contact"
-            className="px-6  py-3 border border-designColor/90  text-white font-semibold rounded-xl shadow bg-gradient-to-r from-designColor/60 to-black hover:bg-gradient-to-r hover:from-black hover:to-designColor/70 transition"
+          <Link
+            to="/contact"
+            className="px-6 py-3 border border-designColor/90 text-white font-semibold rounded-xl shadow bg-gradient-to-r from-designColor/60 to-black hover:bg-gradient-to-r hover:from-black hover:to-designColor/70 transition"
           >
             Let’s Connect
-          </a>
+          </Link>
         </div>
       </div>
     </div>
