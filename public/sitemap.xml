@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home -->
+  <url>
+    <loc>https://georgekasmiro.site/</loc>
+    <lastmod>2025-09-24</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://georgekasmiro.site/about</loc>
+    <lastmod>2025-09-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://georgekasmiro.site/blog</loc>
+    <lastmod>2025-09-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Services -->
+  <url>
+    <loc>https://georgekasmiro.site/services</loc>
+    <lastmod>2025-09-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Projects -->
+  <url>
+    <loc>https://georgekasmiro.site/projects</loc>
+    <lastmod>2025-09-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Project Details (dynamic, can’t list each ID — leave generic) -->
+  <url>
+    <loc>https://georgekasmiro.site/projects/</loc>
+    <lastmod>2025-09-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://georgekasmiro.site/contact</loc>
+    <lastmod>2025-09-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- CV -->
+  <url>
+    <loc>https://georgekasmiro.site/cv</loc>
+    <lastmod>2025-09-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Terms -->
+  <url>
+    <loc>https://georgekasmiro.site/terms</loc>
+    <lastmod>2025-09-24</lastmod>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- FAQ -->
+  <url>
+    <loc>https://georgekasmiro.site/faq</loc>
+    <lastmod>2025-09-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
