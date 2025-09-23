@@ -3,6 +3,7 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import FooterBottom from "./components/footer/FooterBottom";
 import Footer from "./components/footer/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -40,6 +41,7 @@ function App() {
 
   return (
     <div className="w-full h-auto bg-neutral-50 dark:bg-neutral-950 text-neutral-800 dark:text-neutral-300">
+      <ScrollToTop />
       <Navbar />
       <div className="px-4">
         <div className="max-w-screen-xl mx-auto">
