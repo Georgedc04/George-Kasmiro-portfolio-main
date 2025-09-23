@@ -24,13 +24,15 @@ const CV = () => {
 
   return (
     <section className="w-full py-20 pt-24 bg-gray-200 dark:bg-[#0e0e0e] flex flex-col items-center">
-      <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-8">My CV</h2>
-
+      <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-5">My CV</h2>
+        <p
+        className="mb-2 animate-wave text-red-600"
+        >in pc only</p>
       <button
         onClick={handleDownload}
         className="flex items-center gap-2 mb-8 px-6 py-3 bg-gradient-to-r from-designColor/60 to-black hover:from-black hover:to-designColor/70 text-white font-semibold rounded-xl shadow-lgl transition"
       >
-        <FaDownload /> Download PDF
+        <FaDownload /> Download PDF 
       </button>
 
       <div
