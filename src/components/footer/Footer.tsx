@@ -72,13 +72,13 @@ const Footer = () => {
                 Services
             </Link>
           </li>
-          <li>
+         <li>
             <Link 
-              to="/privacy-policy" 
-              className="hover:text-designColor duration-300">
-                Privacy Policy
+              to="/About" className="hover:text-designColor duration-300">
+              About
             </Link>
           </li>
+
           <li>
             <Link 
                 to="/faq" 
@@ -115,9 +115,9 @@ const Footer = () => {
           
           <li>
             <Link 
-              to="/Services" 
+              to="/Contact" 
               className="hover:text-designColor duration-300">
-              Services
+              Contact
             </Link>
           </li>
         </ul>
@@ -136,9 +136,10 @@ const Footer = () => {
           </li>
 
           <li>
-            <a href="/https://github.com/Georgedc04/George-Kasmiro-portfolio.git" className="hover:text-designColor duration-300">
+            <Link 
+              to="/wwww" className="hover:text-designColor duration-300">
               Portfolio Source Code
-            </a>
+            </Link>
           </li>
           <li>
 

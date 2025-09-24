@@ -37,7 +37,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="pt-24 min-h-screen bg-gray-50 dark:bg-[#0a0a0a] text-gray-800 dark:text-gray-100 px-6 py-16">
+    <div className="pt-24 min-h-screen  text-gray-800 dark:text-gray-100 px-6 py-16 ">
       <div className="max-w-4xl mx-auto">
         {/* Title */}
         <h1 className="text-4xl font-bold mb-6 text-center">Frequently Asked Questions</h1>
@@ -50,7 +50,7 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray-300 dark:border-gray-700 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-800"
+              className=" overflow-hidden bg-white/20 dark:bg-black/20 bg-gradient-to-b from-gray-400 to-[#ffffff23] dark:from-[#023b5588] dark:to-[#00000046] rounded-md shadow-shadowOne dark:shadow-shadowTwo"
             >
               <button
                 onClick={() => toggleFAQ(index)}

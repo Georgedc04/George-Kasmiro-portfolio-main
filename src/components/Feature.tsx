@@ -9,11 +9,11 @@ const Feature = () => {
   return (
     <section
       id="features"
-      className="w-full py-20 px-20 px border-b-[1px] border-b-gray-700"
+      className="w-full py-20 px-2 border-b-[1px] border-b-gray-700"
     >
       <FadeIn>
         <Title title="Features" des="What I Do" />
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-20 ">
           <Card
               title="Business Strategy"
               des="Helping businesses grow with smart strategies, market analysis, and innovative solutions to achieve success."

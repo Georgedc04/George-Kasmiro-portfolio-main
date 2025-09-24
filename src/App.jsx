@@ -18,6 +18,7 @@ import OfflinePage from "./pages/Offlinepage";
 import Terms from "./pages/Terms";
 import FAQ from "./pages/FAQ";
 
+
 function App() {
   const navigate = useNavigate();
 

@@ -75,10 +75,9 @@ const Contact = () => {
 
             {/* Right side (form) */}
             <div
-              className="w-full lgl:w-[60%] h-full py-10 
-                bg-white dark:bg-gradient-to-r dark:from-[#16181d] dark:to-[#4d4e4e] 
+              className="w-full lgl:w-[60%] h-full py-10 bg-white/20 dark:bg-black/20 bg-gradient-to-b from-gray-400 to-[#ffffff23] dark:from-[#023b5588] dark:to-[#00000046] shadow-shadowOne dark:shadow-shadowTwo
                 flex flex-col gap-8 p-4 lgl:p-8 
-                rounded-lg shadow-shadowOne transition-colors duration-300"
+                rounded-lg  transition-colors duration-300"
             >
               <form
                 className="w-full flex flex-col gap-4 lgl:gap-6 py-2 lgl:py-5"

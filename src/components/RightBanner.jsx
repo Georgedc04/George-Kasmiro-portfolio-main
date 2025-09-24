@@ -13,7 +13,7 @@ const RightBanner = () => {
       {/* Gradient Overlay */}
       <div className="absolute bottom-0 w-[350px] h-[300px] lgl:w-[500px] lgl:h-[500px] 
                       bg-gradient-to-r from-[#f3f4f600] dark:from-[#0000000e] 
-                      to-[#000000] dark:to-[#ffffffe8] 
+                      to-[#050505] dark:to-[#e8e8e9e8] 
                       shadow-sm flex justify-center items-center">
       </div>
     </FadeIn>

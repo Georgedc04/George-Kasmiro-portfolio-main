@@ -10,6 +10,10 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+body {
+  @apply bg-neutral-50 dark:bg-neutral-950 text-neutral-800 dark:text-neutral-300;
+}
+
 
 @layer components {
 .bannerIcon {

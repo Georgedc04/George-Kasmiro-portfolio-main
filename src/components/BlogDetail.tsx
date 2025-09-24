@@ -80,7 +80,7 @@ const BlogDetail: React.FC<BlogDetailProps> = ({ blog, onBack }) => {
           </figure>
         )}
 
-        {/* Blog Content */}
+        {/* Blog Content */} 
         <article className="prose dark:prose-invert max-w-none">
             <p className="mb-4 leading-relaxed">{blog.content}</p>
 

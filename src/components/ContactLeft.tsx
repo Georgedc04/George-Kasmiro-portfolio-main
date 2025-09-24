@@ -3,10 +3,7 @@ import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 const ContactLeft = () => {
   return (
     <div
-      className="w-full lgl:w-[32%] h-full 
-      bg-white/70 dark:bg-neutral-900/80 backdrop-blur-md
-      border border-neutral-200 dark:border-neutral-700
-      rounded-xl p-4 lgl:p-6 flex flex-col gap-4 shadow-md transition-colors duration-300"
+      className="w-full lgl:w-[32%] h-full bg-white/20 dark:bg-black/20 bg-gradient-to-b from-gray-400 to-[#ffffff23] dark:from-[#023b5588] dark:to-[#00000046] rounded-md shadow-shadowOne dark:shadow-shadowTwo backdrop-blur-md p-4 lgl:p-6 flex flex-col gap-4  transition-colors duration-300"
     >
       {/* Profile Image */}
       <img
