@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -11,29 +12,37 @@ export default {
         bannerViolet: "#7c3aed",
         bannerVioletDark: "#5b21b6",
         customBlue: "#ADB7DC",
-        lightText: "#E5E7EB",   // used in your contact inputs
+        lightText: "#E5E7EB",
       },
       fontFamily: {
         bodyFont: ["Poppins", "sans-serif"],
         titleFont: ["Montserrat", "sans-serif"],
-        inter: ["Inter", "sans-serif"], // keep Inter also
+        inter: ["Inter", "sans-serif"],
       },
       boxShadow: {
-        shadowOne: "0 4px 15px rgba(1,1,0,10.9)",
+        shadowOne: "0 4px 15px rgba(0,0,0,0.5)",
         shadowTwo: "0 4px 15px rgb(255,255,255,0.1)",
       },
-    screens: {
-        xs: "320px",
-        sm: "375px",
-        sml: "500px",
-        md: "667px",
-        mdl: "768px",
-        lg: "960px",
-        lgl: "1024px",
-        xl: "1280px",
+      keyframes: {
+        shakeSide: {
+          '0%, 100%': { transform: 'rotate(-10deg)' },
+          '50%': { transform: 'rotate(10deg)' },
+        },
+      },
+      animation: {
+        shakeSide: 'shakeSide 0.5s infinite',
       },
     },
+    screens: {
+      xs: "320px",
+      sm: "375px",
+      sml: "500px", 
+      md: "667px",
+      mdl: "768px",
+      lg: "960px",
+      lgl: "1024px",
+      xl: "1280px",
+    },
   },
-  plugins: [],
-  darkMode: "class",
+  plugins: [], // ✅ only one empty array is enough
 };

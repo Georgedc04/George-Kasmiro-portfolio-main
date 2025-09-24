@@ -34,14 +34,20 @@ const BlogDetail: React.FC<BlogDetailProps> = ({ blog, onBack }) => {
   return (
     <div className="fixed inset-0 w-full h-full bg-neutral-50 dark:bg-neutral-950 text-neutral-800 dark:text-neutral-300 overflow-y-auto z-50">
       {/* 🔙 Floating Back Button */}
-      <button
-        onClick={onBack}
-        className="fixed top-6 left-6 z-50 px-3 py-2 rounded-full shadow-lg transition
-             bg-blue-600 dark:bg-blue-400 hover:bg-blue-700 dark:hover:bg-blue-500
-             text-white dark:text-black font-semibold"
-      >
-        ← Back
-      </button>
+      <div className="fixed top-6 left-6 z-50">
+        <button
+          onClick={onBack}
+          className="  mt-3 inline-flex items-center justify-center 
+                      px-7 py-1.5 border border-designColor/80 
+                      text-xs text-white font-medium rounded-md 
+                      shadow bg-gradient-to-r from-designColor/60 to-black 
+                      hover:from-black hover:to-designColor/60 
+                      transition"
+        >
+          ← Back
+        </button>
+
+      </div>
 
 
       <div className="max-w-3xl mx-auto px-4 py-20">
@@ -68,7 +74,7 @@ const BlogDetail: React.FC<BlogDetailProps> = ({ blog, onBack }) => {
               className="rounded-lg w-full object-cover shadow-lg cursor-pointer hover:opacity-90 transition"
               onClick={() => setShowImage(true)}
             />
-            <figcaption className="text-xs text-neutral-500 mt-2">
+            <figcaption className="text-xs text-designColor/90 dark:text-yellow-400/80 mt-2">
               {blog.title} (click image to enlarge)
             </figcaption>
           </figure>
@@ -76,28 +82,22 @@ const BlogDetail: React.FC<BlogDetailProps> = ({ blog, onBack }) => {
 
         {/* Blog Content */}
         <article className="prose dark:prose-invert max-w-none">
-          <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
-          <p className="mb-6 leading-relaxed">{blog.content}</p>
+            <p className="mb-4 leading-relaxed">{blog.content}</p>
 
-          <blockquote className="border-l-4 border-designColor pl-4 italic text-neutral-600 dark:text-neutral-400 my-6">
-            “The Future of Cybersecurity with AI.”
-          </blockquote>
+            {blog.insights && blog.insights.length > 0 && (
+              <>
+                <ul className="list-disc pl-6 space-y-2">
+                  {blog.insights.map((point, idx) => (
+                    <li key={idx}>{point}</li>
+                  ))}
+                </ul>
+              </>
+            )}
+          </article>
 
-          {/* ✅ Dynamic Insights */}
-          {blog.insights && blog.insights.length > 0 && (
-            <>
-              <h2 className="text-2xl font-semibold mb-4">Key Insights</h2>
-              <ul className="list-disc pl-6 space-y-4">
-                {blog.insights.map((point, idx) => (
-                  <li key={idx}>{point}</li>
-                ))}
-              </ul>
-            </>
-          )}
-        </article>
 
         {/* Author Section */}
-        <div className="mt-12 p-6 bg-neutral-100 dark:bg-neutral-900 rounded-lg shadow-md flex items-center gap-4">
+        <div className="mt-12 p-6 bg-white/20 dark:bg-black/20 bg-gradient-to-b from-gray-400 to-[#ffffff23] dark:from-[#023b5588] dark:to-[#00000046] rounded-md shadow-shadowOne dark:shadow-shadowTwo flex items-center gap-4">
           <img
             src={blog.authorImage || "/images/faicon.png"}
             alt={blog.author || "George Kasmiro"}

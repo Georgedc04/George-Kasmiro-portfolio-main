@@ -63,21 +63,28 @@ const Footer = () => {
         </h3>
         <ul className="flex flex-col gap-4 font-titleFont font-medium py-6 overflow-hidden">
 
-          <li>
-              <a href="/projects" className="hover:text-designColor duration-300">
-                My Projects
-              </a>
-          </li>
+          
 
           <li>
-            <a href="/services" className="hover:text-designColor duration-300">
-              Services
-            </a>
+              <Link 
+              to="/services" 
+              className="hover:text-designColor duration-300">
+                Services
+            </Link>
           </li>
           <li>
-            <a href="/testimonials" className="hover:text-designColor duration-300">
-              Testimonials
-            </a>
+            <Link 
+              to="/privacy-policy" 
+              className="hover:text-designColor duration-300">
+                Privacy Policy
+            </Link>
+          </li>
+          <li>
+            <Link 
+                to="/faq" 
+                className="hover:text-designColor duration-300">
+                  FAQ
+            </Link>
           </li>
         </ul>
       </div>
@@ -99,14 +106,19 @@ const Footer = () => {
         </li>
 
           <li>
-            <a href="/privacy-policy" className="hover:text-designColor duration-300">
-              Privacy Policy
-            </a>
+              <Link to="/projects" 
+                className="hover:text-designColor duration-300">
+                My Projects
+              </Link>
           </li>
+
+          
           <li>
-            <a href="/terms" className="hover:text-designColor duration-300">
-              Terms of Service
-            </a>
+            <Link 
+              to="/Services" 
+              className="hover:text-designColor duration-300">
+              Services
+            </Link>
           </li>
         </ul>
       </div>
@@ -129,24 +141,15 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="/faq" className="hover:text-designColor duration-300">
-              FAQ
-            </a>
+
+            <Link to="/terms" className="hover:text-designColor duration-300">
+              Terms 
+            </Link>
           </li>
+          
         </ul>
       </div>
-      {/* <div className="w-full h-full">
-        <h3 className="text-xl uppercase text-designColor tracking-wider">
-          Connect
-        </h3>
-        <ul className="flex flex-col gap-4 font-titleFont font-medium py-6 overflow-hidden">
-          {renderLinks([
-            { name: "LinkedIn", href: "https://www.linkedin.com/in/george-kasmiro-2211a42b4" },
-            { name: "Portfolio Source Code", href: "https://github.com/Georgedc04/George-Kasmiro-portfolio.git" },
-            { name: "Support", href: "#contact" },
-          ])}
-        </ul>
-      </div> */}
+    
     </FadeIn>
   );
 };

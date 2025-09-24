@@ -1,74 +1,28 @@
-import { Link } from "react-router-dom";
-
 const Terms = () => {
   return (
-    <div className=" pt-24 min-h-screen bg-gray-50 dark:bg-[#0a0a0a] text-gray-800 dark:text-gray-100 px-6 py-12">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-6 text-center">Terms of Service</h1>
-        <p className="mb-6 text-lg text-center text-gray-600 dark:text-gray-400">
-          Last updated: March 2025
-        </p>
+    <div className=" pt-24 max-w-4xl mx-auto p-6 space-y-6">
+      <h1 className="text-3xl font-bold text-center">Terms of Service</h1>
+      <p>Welcome to my portfolio website. By accessing or using this site, you agree to the following terms:</p>
 
-        <div className="space-y-8">
-          {/* Section 1 */}
-          <section>
-            <h2 className="text-2xl font-semibold mb-3">1. Acceptance of Terms</h2>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              By accessing and using this website, you agree to comply with and be bound by
-              these Terms of Service. If you do not agree with any part, you must not use
-              our services.
-            </p>
-          </section>
+      <h2 className="text-xl font-semibold">1. Personal Use Only</h2>
+      <p>This site and its content are intended for personal viewing, learning, and reference. You may not redistribute or use the content for commercial purposes without my permission.</p>
 
-          {/* Section 2 */}
-          <section>
-            <h2 className="text-2xl font-semibold mb-3">2. Use of Services</h2>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              You agree to use our services only for lawful purposes and in accordance with
-              all applicable laws and regulations. Unauthorized use may result in termination
-              of your access.
-            </p>
-          </section>
+      <h2 className="text-xl font-semibold">2. External Links</h2>
+      <p>This portfolio may include links to external websites. I am not responsible for their content or privacy practices.</p>
 
-          {/* Section 3 */}
-          <section>
-            <h2 className="text-2xl font-semibold mb-3">3. Intellectual Property</h2>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              All content, trademarks, and design elements on this website are owned or
-              licensed by us. You may not reproduce, distribute, or use any content without
-              prior written permission.
-            </p>
-          </section>
+      <h2 className="text-xl font-semibold">3. Accuracy of Information</h2>
+      <p>While I strive to provide accurate and up-to-date information about my work and projects, I do not guarantee completeness or correctness.</p>
 
-          {/* Section 4 */}
-          <section>
-            <h2 className="text-2xl font-semibold mb-3">4. Limitation of Liability</h2>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              We are not responsible for any direct, indirect, or incidental damages that
-              may arise from the use or inability to use our services.
-            </p>
-          </section>
+      <h2 className="text-xl font-semibold">4. Intellectual Property</h2>
+      <p>All content, images, and code snippets on this site are owned by me unless otherwise credited. Unauthorized use is prohibited.</p>
 
-          {/* Section 5 */}
-          <section>
-            <h2 className="text-2xl font-semibold mb-3">5. Changes to Terms</h2>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              We may update these Terms of Service at any time. Continued use of the website
-              after changes constitutes acceptance of the new terms.
-            </p>
-          </section>
-        </div>
+      <h2 className="text-xl font-semibold">5. Modifications</h2>
+      <p>I may update or modify these terms at any time. Continued use of the site signifies acceptance of any changes.</p>
 
-        {/* Back Home Button */}
-        <div className="mt-12 flex justify-center">
-          <Link
-            to="/"
-            className="px-6  py-3 border border-designColor/90  text-white font-semibold rounded-xl shadow bg-gradient-to-r from-designColor/60 to-black hover:bg-gradient-to-r hover:from-black hover:to-designColor/70 transition"
-          >
-            Back to Home
-          </Link>
-        </div>
-      </div>
+      <p className="text-center text-gray-500">
+        © {new Date().getFullYear()} George Kasmiro. All rights reserved.
+      </p>
+
     </div>
   );
 };

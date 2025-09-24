@@ -18,15 +18,12 @@ import OfflinePage from "./pages/Offlinepage";
 import Terms from "./pages/Terms";
 import FAQ from "./pages/FAQ";
 
-
 function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Redirect if offline on initial load
     if (!navigator.onLine) navigate("/offline");
 
-    // Listen for online/offline events
     const handleOnline = () => navigate("/");
     const handleOffline = () => navigate("/offline");
 
@@ -54,10 +51,10 @@ function App() {
             <Route path="/projects/:id" element={<ProjectDetails />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cv" element={<CV />} />
-            <Route path="/offline" element={<OfflinePage />} /> {/* ✅ offline route */}
-            <Route path="*" element={<NotFound />} />
+            <Route path="/offline" element={<OfflinePage />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </div>
